@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test_automation" verbose="1" >
+   <test name="api_test" >
+       <classes>
+           <class name="api_test.SimplePostTest"/>
+           <class name="api_test.SimplePutTest"/>
+           <class name="api_test.SimpleGetTest"/>
+           <class name="api_test.SimplePatchTest"/>
+           <class name="api_test.SimpleDeleteTest"/>
+           <class name="api_test.GetTestWithQueryParameter"/>
+           <class name="api_test.GetTestWithPathVariables"/>
+       </classes>
+   </test>
+    <test name="ui_test" parallel="classes" thread-count="3">
+        <classes>
+            <class name="automation_test.mortgage_calculator.CalculateMortgageRate"/>
+            <class name="automation_test.mortgage_calculator.CalculateRealAprRate"/>
+        </classes>
+    </test>
+</suite>
